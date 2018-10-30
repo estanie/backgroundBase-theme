@@ -1,0 +1,23 @@
+{{!< default}}
+<header class="header outer">
+    <div class="inner">
+        <div class="content">
+            <h1 class="title"> {{@blog.title}} </h1>
+        </div>
+    </div>
+</header>
+
+{{!-- The main content area --}}
+{{!-- TODO(gayeon): Add paginations. --}}
+<main id="site-main" class="site-main outer">
+    {{>"site-nav"}}
+    <div class="inner">
+        <div class="post-feed">
+            {{#foreach posts}}
+                {{!-- show post list. --}}
+                {{> "post-list"}}
+            {{/foreach}}
+        </div>
+        {{pagination}}
+    </div>
+</main>

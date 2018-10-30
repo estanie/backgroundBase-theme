@@ -1,0 +1,41 @@
+{{!< default}}
+
+<header class="header outer">
+    <div class="inner">
+    </div>
+</header>
+{{#post}}
+    {{!-- TODO(gayeon): add media-query. --}}
+    <figure class="full-image" style="background-image: linear-gradient(to bottom, transparent 0%, black 100%), {{#if feature_image}}url({{feature_image}}){{/if}}"></figure>
+    {{!--<figure class="full-image" {{#if feature_image}}style="background-image: url({{feature_image}})"{{/if}}></figure>--}}
+    <main id="site-main" class="site-main outer">
+        {{> "site-nav"}}
+        <div class="inner">
+            <article class="post {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+                <section class="content-wrapper">
+                    {{!-- TODO(gayeon): Try to move upper. --}}
+                    <header>
+                        <section class="meta">
+                            <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+                            {{#primary_tag}}
+                                <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
+                            {{/primary_tag}}
+                        </section>
+                        <h1 class="title">{{title}}</h1>
+                    </header>
+
+                    <div class="content">
+                        {{content}}
+                    </div>
+                    {{> comments }}
+                </section>
+
+
+            </article>
+        </div>
+    </main>
+
+    {{!-- TODO(gayeon):  Add other post list. e.g. prev, next, same tag or category. --}}
+    <aside class="other-post-list">
+    </aside>
+{{/post}}

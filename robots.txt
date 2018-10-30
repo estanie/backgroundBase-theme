@@ -1,0 +1,6 @@
+User-agent: *
+Sitemap: http://blog.epthy.com/sitemap.xml
+Disallow: /ghost/
+Disallow: /tags/
+Disallow: /pages/
+Disallow: /authors/

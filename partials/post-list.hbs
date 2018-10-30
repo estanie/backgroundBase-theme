@@ -1,0 +1,11 @@
+<article class="post-list {{post_class}}{{#unless feature_image}} no-image{{/unless}}">
+    <a href="{{url}}">
+        <div class="image" style="{{#if feature_image}}background-image : url({{feature_image}}){{/if}}">
+            <div class="content">
+                <header>
+                    <h2 class="title">{{title}}</h2>
+                </header>
+            </div>
+        </div>
+    </a>
+</article>

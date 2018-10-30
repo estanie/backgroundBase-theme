@@ -1,0 +1,16 @@
+<nav class="nav-wrapper">
+    <div class="profile">
+        {{#if @blog.logo}}
+            <a class="nav-logo" href="{{@blog.url}}"><img class="round" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+            <span>{{@blog.description}}</span>
+        {{else}}
+            <a class="nav-logo" href="{{@blog.url}}">{{@blog.title}}</a>
+            <span>{{@blog.title}}</span>
+        {{/if}}
+    </div>
+    <div class="nav-category">
+    {{#if @blog.navigation}}
+        {{navigation}}
+    {{/if}}
+    </div>
+</nav>

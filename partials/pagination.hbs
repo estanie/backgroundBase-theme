@@ -1,0 +1,17 @@
+<nav class="pagination">
+    <span id="prev-page"></span>
+    <span id="page-number"></span>
+    <span id="next-page"></span>
+</nav>
+
+<script>
+    // TODO(gayeon): Add next and prev page links. Also change href. It is not work for tags. Or make new tag site.
+    let curPage = {{page}};
+    const pageGroup = parseInt(curPage / 10);
+    $("#page-number").append(' ');
+    for (let i = 1 + pageGroup * 10; i<={{pages}} && i<= (pageGroup + 1) * 10; i++) {
+    	let color = (curPage === i) ? 'cur-number' : 'number';
+        $("#page-number").append(`<a class="${color}" href="/page/${i}/#open"> ${i} </a>`);
+    }
+
+</script>

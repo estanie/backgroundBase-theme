@@ -1,0 +1,26 @@
+.nav-wrapper {
+  position: absolute;
+  left: 0;
+  margin-left: 2em;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  height: 100%;
+  padding: 40px 0 0;
+
+  .profile {
+    text-align: center;
+    margin: 1em 0;
+    .nav-logo {
+      display: block;
+      img {
+        width: 7em;
+        height: 7em;
+        border: $trans-orange-pink 2px solid;
+      }
+      img.round {
+        border-radius: 50%;
+      }
+    }
+  }
+}
